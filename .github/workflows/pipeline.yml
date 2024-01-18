@@ -9,8 +9,7 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
 
-    env:
-      TF_VERSION: "~> 5.0"  # Replace with your desired Terraform version
+      # Replace with your desired Terraform version
 
     steps:
     - name: Checkout Repository

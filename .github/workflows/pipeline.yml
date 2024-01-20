@@ -40,10 +40,6 @@ jobs:
       run: terraform plan
 
     - name: Terraform Apply
-      if: github.event_name == 'pull_request' && github.event.action == 'closed'
+      if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged
       run: terraform apply -auto-approve tfplan
 
-    - name: Terraform Apply (Main Branch)
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      run: terraform apply -auto-approve
-      

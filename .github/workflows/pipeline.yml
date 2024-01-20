@@ -3,7 +3,8 @@ name: Terraform Workflow
 on:
   push:
     branches:
-      - condition
+      - '*'
+      - '!main'
   pull_request:
     branches:
       - main

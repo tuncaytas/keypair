@@ -42,3 +42,4 @@ jobs:
     - name: Terraform Apply
       if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged
       run: terraform apply -auto-approve tfplan
+
